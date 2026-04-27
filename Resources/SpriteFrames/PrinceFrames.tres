@@ -1,0 +1,41 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://7yosd1me6drj"]
+
+[ext_resource type="Texture2D" uid="uid://bexgnbn7dj4k1" path="res://Assets/PrinceNasuPal_back.png" id="1_mbu76"]
+[ext_resource type="Texture2D" uid="uid://cs2omdjulmubt" path="res://Assets/PrinceNasuPal_front.png" id="2_nc22i"]
+[ext_resource type="Texture2D" uid="uid://bvr46r5lv1alx" path="res://Assets/PrinceNasuPal_left.png" id="3_avci6"]
+[ext_resource type="Texture2D" uid="uid://d1cn6vigcpg15" path="res://Assets/PrinceNasuPal_right.png" id="4_7c2md"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_nc22i")
+}],
+"loop": true,
+"name": &"Back",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mbu76")
+}],
+"loop": true,
+"name": &"Front",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_avci6")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 0.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_7c2md")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 0.0
+}]

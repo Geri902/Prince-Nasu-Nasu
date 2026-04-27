@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=4 uid="uid://cn7ok88cmwkto"]
+
+[ext_resource type="Script" uid="uid://bqsbesxhfciqx" path="res://Scripts/Node Scripts/MainGame.cs" id="1_v8gn8"]
+[ext_resource type="Script" uid="uid://d0dywr1tcr8c8" path="res://Scripts/Node Scripts/PlayerOverworld.cs" id="2_bfnmj"]
+[ext_resource type="SpriteFrames" uid="uid://7yosd1me6drj" path="res://Resources/SpriteFrames/PrinceFrames.tres" id="2_n4nrf"]
+[ext_resource type="TileSet" uid="uid://dfcjxbw4gxrwf" path="res://Resources/TileSets/WallTiles.tres" id="3_n4nrf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfnmj"]
+size = Vector2(510, 510)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_v8gn8")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("2_bfnmj")
+
+[node name="Shape" type="CollisionShape2D" parent="Player"]
+shape = SubResource("RectangleShape2D_bfnmj")
+
+[node name="Frames" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = ExtResource("2_n4nrf")
+animation = &"Back"
+
+[node name="MoveTimer" type="Timer" parent="Player"]
+
+[node name="Camera" type="Camera2D" parent="."]
+zoom = Vector2(0.15, 0.15)
+
+[node name="Walls" type="TileMapLayer" parent="."]
+scale = Vector2(4, 4)
+tile_map_data = PackedByteArray("AAD5/wMAAwAAAAAAAAD6/wMAAwAAAAAAAAD7/wMAAwAAAAAAAAD8/wMAAwAAAAAAAAD9/wMAAwAAAAAAAAD+/wMAAwAAAAAAAAD//wMAAwAAAAAAAAAAAAMAAwAAAAAAAAABAAMAAwAAAAAAAAACAAMAAwAAAAAAAAADAAMAAwAAAAAAAAAEAAMAAwAAAAAAAAAFAAMAAwAAAAAAAAAGAAMAAwAAAAAAAAAGAAIAAwAAAAAAAAAGAAEAAwAAAAAAAAAGAAAAAwAAAAAAAAAGAP//AwAAAAAAAAAGAP7/AwAAAAAAAAAGAP3/AwAAAAAAAAAGAPz/AwAAAAAAAAAFAPz/AwAAAAAAAAAEAPz/AwAAAAAAAAADAPz/AwAAAAAAAAACAPz/AwAAAAAAAAABAPz/AwAAAAAAAAAAAPz/AwAAAAAAAAD///z/AwAAAAAAAAD+//z/AwAAAAAAAAD9//z/AwAAAAAAAAD8//z/AwAAAAAAAAD7//z/AwAAAAAAAAD6//z/AwAAAAAAAAD5//z/AwAAAAAAAAD5//3/AwAAAAAAAAD5//7/AwAAAAAAAAD5////AwAAAAAAAAD5/wAAAwAAAAAAAAD5/wEAAwAAAAAAAAD5/wIAAwAAAAAAAAA=")
+tile_set = ExtResource("3_n4nrf")
